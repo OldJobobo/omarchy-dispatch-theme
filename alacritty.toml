@@ -3,6 +3,9 @@
 # 
 
 
+[window]
+opacity = 0.85
+
 [font.normal]
 family = "GeistMono Nerd Font Propo"
 

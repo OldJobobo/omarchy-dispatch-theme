@@ -55,6 +55,7 @@ The theme lives in the tension between those two spaces. You're on comms between
 - Foreground: `#b69f80`
 - Amber (`#e6c93a`) as selection and cursor highlight
 - Teal as syntax/data color
+- **Opacity: 0.85** — the terminal reads as a smoked tactical glass panel over the wallpaper. Dark enough to keep warm-tan text crisp; transparent enough to show the ops-map grid beneath. Professional overlay register, not a showy glass effect.
 
 ### SwayOSD
 - Background: deep teal — `#255051`
@@ -87,7 +88,7 @@ Amber `#e6c93a` is an alternative for active if more visual punch is wanted — 
 **Decorations**
 - Rounding: 0 — the game UI is all hard rectangular panels, no softening.
 - Shadows: subtle, teal-tinted (`#255051` base) — gives windows the floating panel quality of the ops HUD without heavy drop shadows
-- Blur: optional but appropriate — frosted glass reads as a layered HUD surface, consistent with the tactical map overlays
+- Blur: `size = 8, passes = 2, noise = 0.02, brightness = 0.85` — smoked tactical glass, not soft consumer frosted. Wide enough radius for clear depth layering; low noise keeps the ops room clean rather than grungy; brightness dimmed slightly to preserve the dark HUD character. xray off so blur respects the panel hierarchy.
 
 **Animations**
 Keep animations crisp and directional — nothing bouncy or organic. The ops room doesn't have personality animations. Slide or fade transitions at moderate speed. Window open/close should feel like a panel engaging, not a window bouncing into place.
