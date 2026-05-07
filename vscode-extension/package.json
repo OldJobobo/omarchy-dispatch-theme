@@ -1,0 +1,20 @@
+{
+    "name": "theme-aether",
+    "displayName": "Dispatch Theme",
+    "description": "Aether color theme generated from wallpaper",
+    "publisher": "local",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": ["Themes"],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Dispatch",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aether-color-theme.json"
+            }
+        ]
+    }
+}

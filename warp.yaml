@@ -1,0 +1,26 @@
+name: Dispatch
+accent: "#e6c93a"
+cursor: "#e6c93a"
+background: "#141d23"
+foreground: "#b69f80"
+details: darker
+
+terminal_colors:
+  normal:
+    black:   "#141d23"
+    red:     "#d61f20"
+    green:   "#63bba5"
+    yellow:  "#e6c93a"
+    blue:    "#7c49e0"
+    magenta: "#c44b8f"
+    cyan:    "#93c5b3"
+    white:   "#b69f80"
+  bright:
+    black:   "#255051"
+    red:     "#f09631"
+    green:   "#7fd0bb"
+    yellow:  "#cdb79c"
+    blue:    "#a78cff"
+    magenta: "#f762c2"
+    cyan:    "#2f6667"
+    white:   "#d8c7b0"

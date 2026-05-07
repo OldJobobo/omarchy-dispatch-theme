@@ -1,0 +1,8 @@
+@define-color background #141d23;
+@define-color foreground #b69f80;
+@define-color accent #e6c93a;
+@define-color teal #63bba5;
+
+* {
+    font-family: "GeistMono Nerd Font Propo";
+}

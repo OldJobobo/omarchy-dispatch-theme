@@ -1,0 +1,35 @@
+
+scheme: "Dispatch"
+author: "OldJobobo (github.com/OldJobobo)"
+variant: "dark"
+
+palette:
+  # --- core tonal ramp ---
+  base00: "#141d23" # deepest background
+  base01: "#1b2831" # main background
+  base02: "#22343d" # elevated background
+  base03: "#255051" # selection / dark accent surface
+  base04: "#8a7b68" # muted tan chrome
+  base05: "#b69f80" # primary warm foreground
+  base06: "#cdb79c" # warm light foreground
+  base07: "#d8c7b0" # brightest foreground
+
+  # --- standard accent lanes ---
+  base08: "#d61f20" # red
+  base09: "#f09631" # orange
+  base0A: "#e6c93a" # yellow
+  base0B: "#63bba5" # green
+  base0C: "#93c5b3" # aqua
+  base0D: "#7c49e0" # blue
+  base0E: "#c44b8f" # purple
+  base0F: "#b26b05" # brown
+
+  # --- extended bright / utility accents ---
+  base10: "#10171c" # darker bg alt
+  base11: "#19242b" # dark bg alt 2
+  base12: "#de6d40" # bright red-orange
+  base13: "#f762c2" # bright magenta
+  base14: "#7fd0bb" # bright green-aqua
+  base15: "#a78cff" # bright violet
+  base16: "#cdb79c" # pale warm highlight
+  base17: "#2f6667" # deep cyan-teal

@@ -1,0 +1,55 @@
+# alacritty.toml
+# By OldJobobo (https://github.com/OldJobobo)
+# 
+
+
+[font.normal]
+family = "GeistMono Nerd Font Propo"
+
+[colors]
+[colors.primary]
+background = "#141d23"
+foreground = "#b69f80"
+
+[colors.normal]
+black   = "#141d23"
+red     = "#d61f20"
+green   = "#63bba5"
+yellow  = "#e6c93a"
+blue    = "#7c49e0"
+magenta = "#c44b8f"
+cyan    = "#93c5b3"
+white   = "#b69f80"
+
+[colors.bright]
+black   = "#255051"
+red     = "#f09631"
+green   = "#7fd0bb"
+yellow  = "#cdb79c"
+blue    = "#a78cff"
+magenta = "#f762c2"
+cyan    = "#2f6667"
+white   = "#d8c7b0"
+
+[colors.cursor]
+text   = "#141d23"
+cursor = "#e6c93a"
+
+[colors.selection]
+text       = "#141d23"
+background = "#e6c93a"
+
+#   ______   __       ______                                       
+#  /_____/\ /_/\     /_____/\                                      
+#  \:::_ \ \\:\ \    \:::_ \ \                                     
+#   \:\ \ \ \\:\ \    \:\ \ \ \                                    
+#    \:\ \ \ \\:\ \____\:\ \ \ \                                   
+#     \:\_\ \ \\:\/___/\\:\/.:| |                                  
+#   ___\_____\/_\_____\/ \____/_/  ______    _______   ______      
+#  /________/\/_____/\ /_______/\ /_____/\ /_______/\ /_____/\     
+#  \__.::.__\/\:::_ \ \\::: _  \ \\:::_ \ \\::: _  \ \\:::_ \ \    
+#    /_\::\ \  \:\ \ \ \\::(_)  \/_\:\ \ \ \\::(_)  \/_\:\ \ \ \   
+#    \:.\::\ \  \:\ \ \ \\::  _  \ \\:\ \ \ \\::  _  \ \\:\ \ \ \  
+#     \: \  \ \  \:\_\ \ \\::(_)  \ \\:\_\ \ \\::(_)  \ \\:\_\ \ \ 
+#      \_____\/   \_____\/ \_______\/ \_____\/ \_______\/ \_____\/ 
+#

@@ -1,0 +1,10 @@
+* {
+    font-family: "GeistMono Nerd Font Propo";
+}
+
+@define-color selected-text #e6c93a;
+@define-color text #b69f80;
+@define-color base #141d23;
+@define-color border #8a7b68;
+@define-color foreground #b69f80;
+@define-color background #141d23;
