@@ -53,12 +53,12 @@ The theme lives in the tension between those two spaces. You're on comms between
 ### Terminal (foot, alacritty, kitty, ghostty)
 - Background: `#141d23`
 - Foreground: `#b69f80`
-- Amber (`#e6c93a`) as selection and cursor highlight
+- Base02 (`#22343d`) as selection, amber (`#e6c93a`) as cursor highlight
 - Teal as syntax/data color
 - **Opacity: 0.85** — the terminal reads as a smoked tactical glass panel over the wallpaper. Dark enough to keep warm-tan text crisp; transparent enough to show the ops-map grid beneath. Professional overlay register, not a showy glass effect.
 
 ### SwayOSD
-- Background: deep teal — `#255051`
+- Background: elevated blue-green — `#22343d`
 - Foreground: bright cyan — `#93c5b3`
 - Border: tan — `#8a7b68`
 - Progress fill: amber — `#e6c93a` — retro terminal bar, warm against the cold panel

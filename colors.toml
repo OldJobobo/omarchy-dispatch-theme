@@ -1,21 +1,70 @@
-# Accent and UI colors
+# Metadata reference
+# These Base24 slots document the canonical source palette. Current Omarchy
+# templates only use them if a template explicitly references {{ baseNN }}.
+base00 = "#141d23"
+base01 = "#1b2831"
+base02 = "#22343d"
+base03 = "#255051"
+base04 = "#8a7b68"
+base05 = "#b69f80"
+base06 = "#cdb79c"
+base07 = "#d8c7b0"
+base08 = "#d61f20"
+base09 = "#f09631"
+base0A = "#e6c93a"
+base0B = "#63bba5"
+base0C = "#93c5b3"
+base0D = "#7c49e0"
+base0E = "#c44b8f"
+base0F = "#b26b05"
+base10 = "#10171c"
+base11 = "#19242b"
+base12 = "#de6d40"
+base13 = "#f762c2"
+base14 = "#7fd0bb"
+base15 = "#a78cff"
+base16 = "#cdb79c"
+base17 = "#2f6667"
+
+# Base24 Omarchy implementation keys
+# Semantic keys consumed by the current Omarchy template renderer.
+background = "#141d23"
+foreground = "#b69f80"
+dark_bg = "#19242b"
+darker_bg = "#10171c"
+lighter_bg = "#1b2831"
+selection = "#22343d"
+muted = "#255051"
+dark_fg = "#8a7b68"
+light_fg = "#cdb79c"
+bright_fg = "#d8c7b0"
+
 accent = "#e6c93a"
 red = "#d61f20"
+orange = "#f09631"
+yellow = "#e6c93a"
+green = "#63bba5"
+cyan = "#93c5b3"
+blue = "#7c49e0"
+purple = "#c44b8f"
+brown = "#b26b05"
+bright_red = "#de6d40"
+bright_yellow = "#cdb79c"
+bright_green = "#7fd0bb"
+bright_cyan = "#2f6667"
+bright_blue = "#a78cff"
+bright_purple = "#f762c2"
+
+cursor = "#e6c93a"
+
+selection_foreground = "#b69f80"
+selection_background = "#22343d"
+
 active_border_color = "#d8c7b0"
 active_tab_background = "#e6c93a"
 
-# Cursor colors
-cursor = "#e6c93a"
-
-# Primary colors
-foreground = "#b69f80"
-background = "#141d23"
-
-# Selection colors
-selection_foreground = "#141d23"
-selection_background = "#e6c93a"
-
-# Normal colors (ANSI 0-7)
+# Legacy colors.toml keys
+# ANSI colorN entries are still used by compatibility paths and some templates.
 color0 = "#141d23"
 color1 = "#d61f20"
 color2 = "#63bba5"
@@ -24,10 +73,8 @@ color4 = "#7c49e0"
 color5 = "#c44b8f"
 color6 = "#93c5b3"
 color7 = "#b69f80"
-
-# Bright colors (ANSI 8-15)
 color8 = "#255051"
-color9 = "#f09631"
+color9 = "#de6d40"
 color10 = "#7fd0bb"
 color11 = "#cdb79c"
 color12 = "#a78cff"

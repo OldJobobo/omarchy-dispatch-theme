@@ -26,7 +26,7 @@ white   = "#b69f80"
 
 [colors.bright]
 black   = "#255051"
-red     = "#f09631"
+red     = "#de6d40"
 green   = "#7fd0bb"
 yellow  = "#cdb79c"
 blue    = "#a78cff"
@@ -39,8 +39,8 @@ text   = "#141d23"
 cursor = "#e6c93a"
 
 [colors.selection]
-text       = "#141d23"
-background = "#e6c93a"
+text       = "#b69f80"
+background = "#22343d"
 
 #   ______   __       ______                                       
 #  /_____/\ /_/\     /_____/\                                      

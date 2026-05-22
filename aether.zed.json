@@ -74,7 +74,7 @@
         "terminal.ansi.bright_black": "#255051",
         "terminal.ansi.dim_black": null,
         "terminal.ansi.red": "#d61f20",
-        "terminal.ansi.bright_red": "#f09631",
+        "terminal.ansi.bright_red": "#de6d40",
         "terminal.ansi.dim_red": null,
         "terminal.ansi.green": "#63bba5",
         "terminal.ansi.bright_green": "#7fd0bb",
@@ -140,7 +140,7 @@
         "players": [
           {
             "cursor": "#e6c93a",
-            "selection": "#e6c93a",
+            "selection": "#22343d",
             "background": null
           }
         ],

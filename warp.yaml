@@ -17,7 +17,7 @@ terminal_colors:
     white:   "#b69f80"
   bright:
     black:   "#255051"
-    red:     "#f09631"
+    red:     "#de6d40"
     green:   "#7fd0bb"
     yellow:  "#cdb79c"
     blue:    "#a78cff"

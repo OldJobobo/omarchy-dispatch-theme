@@ -2,7 +2,7 @@ themes {
     current {
         text_unselected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165
@@ -10,14 +10,14 @@ themes {
         }
         text_selected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165
             emphasis_3 196 75 143
         }
         ribbon_selected {
-            base 37 80 81
+            base 34 52 61
             background 230 201 58
             emphasis_0 214 31 32
             emphasis_1 214 31 32
@@ -25,7 +25,7 @@ themes {
             emphasis_3 124 73 224
         }
         ribbon_unselected {
-            base 37 80 81
+            base 34 52 61
             background 138 123 104
             emphasis_0 214 31 32
             emphasis_1 138 123 104
@@ -42,7 +42,7 @@ themes {
         }
         table_cell_selected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165
@@ -50,7 +50,7 @@ themes {
         }
         table_cell_unselected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165
@@ -58,7 +58,7 @@ themes {
         }
         list_selected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165
@@ -66,7 +66,7 @@ themes {
         }
         list_unselected {
             base 182 159 128
-            background 37 80 81
+            background 34 52 61
             emphasis_0 214 31 32
             emphasis_1 147 197 179
             emphasis_2 99 187 165

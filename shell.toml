@@ -19,6 +19,8 @@ countdown  = "#e6c93a"
 background = "#141d23"
 text       = "#b69f80"
 selected   = "#e6c93a"
+selected-background = "#22343d"
+selected-text       = "#e6c93a"
 
 [image-picker]
 background        = "#141d23"
