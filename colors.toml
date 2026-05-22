@@ -1,5 +1,6 @@
 # Accent and UI colors
 accent = "#e6c93a"
+red = "#d61f20"
 active_border_color = "#d8c7b0"
 active_tab_background = "#e6c93a"
 

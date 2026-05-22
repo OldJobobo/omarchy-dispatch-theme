@@ -1,0 +1,27 @@
+# Omarchy shell surface colors.
+
+[bar]
+background = "#141d23"
+text       = "#b69f80"
+active     = "#d61f20"
+
+[popups]
+background = "#141d23"
+border     = "#8a7b68"
+
+[notifications]
+background = "#141d23"
+text       = "#d8c7b0"
+border     = "#8a7b68"
+countdown  = "#e6c93a"
+
+[menu]
+background = "#141d23"
+text       = "#b69f80"
+selected   = "#e6c93a"
+
+[image-picker]
+background        = "#141d23"
+text              = "#b69f80"
+selected-border   = "#e6c93a"
+unselected-border = "#8a7b68"
