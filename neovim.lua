@@ -38,6 +38,11 @@ return {
 				-- magenta: Function declarations, exception handling, tags
 				magenta = "#f762c2",
 			},
+			on_highlights = function(hl, c)
+				hl.LspReferenceText = { bg = c.bg_highlight, fg = c.fg }
+				hl.LspReferenceRead = { bg = c.bg_highlight, fg = c.fg }
+				hl.LspReferenceWrite = { bg = c.bg_highlight, fg = c.yellow, bold = true }
+			end,
 		},
 		config = function(_, opts)
 			require("aether").setup(opts)
