@@ -33,7 +33,7 @@ return {
 				cyan = "#93c5b3",
 				-- blue: Functions, keywords, directories, links, info diagnostics
 				blue = "#7c49e0",
-				-- purple: Storage keywords, special keywords, identifiers, namespaces
+				-- purple: Storage keywords, special keywords, identifiers, namespaces :)
 				purple = "#c44b8f",
 				-- magenta: Function declarations, exception handling, tags
 				magenta = "#f762c2",
