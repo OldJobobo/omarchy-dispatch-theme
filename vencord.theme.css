@@ -204,9 +204,10 @@
     --text-danger: var(--dispatch-red-bright);
     --text-brand: var(--dispatch-amber);
     --channels-default: color-mix(in srgb, var(--dispatch-text) 62%, var(--dispatch-chrome) 38%) !important;
+    --channels-default-read: color-mix(in srgb, var(--channels-default) 36%, var(--text-5) 64%) !important;
     --channels-default-muted: color-mix(in srgb, var(--channels-default) 48%, var(--text-5) 52%) !important;
     --channels-default-unread: var(--dispatch-text-bright) !important;
-    --channel-icon: var(--text-4);
+    --channel-icon: var(--channels-default-read);
     --channel-text-area-placeholder: var(--text-4);
     --header-primary: var(--text-1);
     --header-secondary: var(--text-2);
@@ -293,6 +294,7 @@
     --interactive-hover: var(--dispatch-text-bright);
     --interactive-active: var(--text-1);
     --channels-default: color-mix(in srgb, var(--dispatch-text) 62%, var(--dispatch-chrome) 38%) !important;
+    --channels-default-read: color-mix(in srgb, var(--channels-default) 36%, var(--text-5) 64%) !important;
     --channels-default-muted: color-mix(in srgb, var(--channels-default) 48%, var(--text-5) 52%) !important;
     --channels-default-unread: var(--dispatch-text-bright) !important;
 }
@@ -492,7 +494,15 @@ a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selecte
 a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) [class*="name"] *,
 li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="name"],
 li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="name"] * {
-    color: var(--channels-default) !important;
+    color: var(--channels-default-read) !important;
+}
+
+a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) svg,
+a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) svg path,
+li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="icon__"],
+li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="icon__"] path {
+    color: var(--channels-default-read) !important;
+    fill: var(--channels-default-read) !important;
 }
 
 #channels [class*="modeUnread"] [class*="name__"],
