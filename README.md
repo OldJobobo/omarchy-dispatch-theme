@@ -4,7 +4,7 @@ A tactical dark theme inspired by *Dispatch*: cold teal operations panels, warm 
 
 ## Preview
 
-![Dispatch lock screen preview](preview-unlock.png)
+![Dispatch desktop preview](preview.png)
 
 ## Install
 
@@ -26,12 +26,30 @@ omarchy-theme-install https://github.com/OldJobobo/omarchy-dispatch-theme
 
 ## Adaptive Hyprland Moods
 
-The Quattro Hyprland configuration follows the active wallpaper and selects one of four treatments:
+The Quattro Hyprland configuration follows the active wallpaper and selects one of four coordinated treatments. Each mood changes focused-window chrome, shadow depth, glass tuning, and motion while preserving Dispatch's square geometry.
 
-- `ops` — cream HUD chrome and restrained command-center glass
-- `night` — cyan focus, deeper blur, and broader separation from dark scenes
-- `street` — amber focus, higher contrast, and faster directional motion
-- `briefing` — muted rose chrome and steadier movement for team and interior shots
+<table>
+  <tr>
+    <td width="50%">
+      <img src="preview-ops.png" alt="Dispatch Ops mood desktop preview" />
+      <br><strong><code>ops</code></strong> — cream HUD chrome and restrained command-center glass.
+    </td>
+    <td width="50%">
+      <img src="preview-night.png" alt="Dispatch Night mood desktop preview" />
+      <br><strong><code>night</code></strong> — cyan focus, deeper blur, and broader separation from dark scenes.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="preview-street.png" alt="Dispatch Street mood desktop preview" />
+      <br><strong><code>street</code></strong> — amber focus, higher contrast, and faster directional motion.
+    </td>
+    <td width="50%">
+      <img src="preview-briefing.png" alt="Dispatch Briefing mood desktop preview" />
+      <br><strong><code>briefing</code></strong> — muted rose chrome and steadier movement for team and interior shots.
+    </td>
+  </tr>
+</table>
 
 Automatic detection is enabled by default. To pin a treatment, set `wallpaper_mood` in `hyprland/dispatch/settings.lua` to `ops`, `night`, `street`, or `briefing`.
 

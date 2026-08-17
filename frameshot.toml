@@ -1,0 +1,38 @@
+version = 1
+name = "Dispatch operations desk"
+theme_name = "Dispatch"
+canvas = [2560, 1440]
+wallpaper = "{theme}/backgrounds/07-ops-map-night.jpg"
+workspace = "90"
+monitor = "focused"
+focus = "nvim"
+settle_seconds = 3.0
+terminal = "foot"
+
+# Primary command panel: a real syntax-rich sample from the code-template library.
+[[windows]]
+id = "nvim"
+cwd = "{templates}"
+command = ["nvim", "rust-preview-demo.rs", "+normal! 12Gzz"]
+rect = [90, 90, 1170, 830]
+
+# Tactical telemetry occupies the upper-right quadrant.
+[[windows]]
+id = "btop"
+cwd = "{theme}"
+command = ["btop"]
+rect = [1340, 90, 1130, 585]
+
+# Asset browser steps inward beneath telemetry and exposes the wallpaper pack.
+[[windows]]
+id = "assets"
+cwd = "{theme}"
+command = ["yazi", "{theme}/backgrounds"]
+rect = [1380, 735, 1050, 330]
+
+# Low, wide audio trace completes the operations-console silhouette.
+[[windows]]
+id = "cava"
+cwd = "{theme}"
+command = ["bash", "-lc", "cava; exec bash"]
+rect = [250, 1150, 2060, 190]
