@@ -33,6 +33,25 @@ local function resolve_path(path)
 	return (resolved and resolved:match("([^\n]+)")) or path
 end
 
+local function path_exists(path)
+	if not path or path == "" then
+		return false
+	end
+
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		return true
+	end
+
+	return false
+end
+
+local function resolve_existing_path(path)
+	local resolved = resolve_path(path)
+	return path_exists(resolved) and resolved or nil
+end
+
 local function swaybg_background()
 	-- Omarchy and JoboWalls both end up launching swaybg for static wallpapers.
 	-- Reading the live process catches cases where their state files disagree.
@@ -48,7 +67,7 @@ local function swaybg_background()
 		path = line:match("%s%-i%s+(.+)%s%-m%s+") or line:match("%s%-i%s+(.+)$") or path
 	end
 
-	return resolve_path(path)
+	return resolve_existing_path(path)
 end
 
 local function jobowalls_background()
@@ -62,14 +81,15 @@ local function jobowalls_background()
 	local state = file:read("*a")
 	file:close()
 
-	return state and state:match([["wallpaper"%s*:%s*"([^"]+)"]]) or nil
+	return resolve_existing_path(state and state:match([["wallpaper"%s*:%s*"([^"]+)"]]))
 end
 
 local function omarchy_background()
-	-- Stock Omarchy background switching maintains this symlink. It is the
-	-- final fallback because JoboWalls can render a different image.
+	-- Quattro moved current theme state under ~/.local/state/omarchy. Keep the
+	-- older ~/.config/omarchy/current path as a fallback for Omarchy 3.8.x.
 	local home = os.getenv("HOME") or ""
-	return resolve_path(home .. "/.config/omarchy/current/background")
+	return resolve_existing_path(home .. "/.local/state/omarchy/current/background")
+		or resolve_existing_path(home .. "/.config/omarchy/current/background")
 end
 
 local function current_background()

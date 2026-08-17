@@ -2,8 +2,8 @@
 # Cold ops-map glass, warm HQ chrome, amber mission state, teal data relief.
 
 [bar]
-background       = "#10171c"
-background-alpha = 0.88
+background       = "#19242b"
+background-alpha = 1.0
 text             = "#b69f80"
 active           = "#e6c93a"
 scale-with-font  = true

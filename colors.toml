@@ -61,7 +61,6 @@ selection_foreground = "#b69f80"
 selection_background = "#22343d"
 
 active_border_color = "#d8c7b0"
-active_tab_background = "#e6c93a"
 
 # Legacy colors.toml keys
 # ANSI colorN entries are still used by compatibility paths and some templates.
@@ -81,3 +80,10 @@ color12 = "#a78cff"
 color13 = "#f762c2"
 color14 = "#2f6667"
 color15 = "#d8c7b0"
+
+# Omarchy 4 semantic palette roles. Keep these aligned with color0-color15.
+mode = "dark"
+bg = "#141d23"
+fg = "#b69f80"
+magenta = "#c44b8f"
+bright_magenta = "#f762c2"
