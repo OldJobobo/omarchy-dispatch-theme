@@ -274,12 +274,6 @@
     --radius-xxl: 0px;
 }
 
-/* Midnight promotes every scroll-like element to its own compositing layer.
- * That can fight Discord's history scroll anchoring when messages are prepended. */
-[class*="scroll"] {
-    will-change: auto !important;
-}
-
 .theme-dark,
 .theme-darker,
 .theme-midnight,
@@ -954,7 +948,7 @@ body {
     z-index: 1;
     background-image: var(--dispatch-scanline);
     opacity: 0.28;
-    mix-blend-mode: soft-light;
+    mix-blend-mode: normal;
 }
 
 .sidebar_c48ade,
@@ -1041,6 +1035,27 @@ body {
 .embedFull__623de a,
 [class*="embed"] a {
     color: var(--dispatch-teal-light) !important;
+}
+
+/* Keep animated attachment repaints inside their own paint boundary so they do
+ * not invalidate Discord's managed history scroller while older pages mount. */
+:is(
+    .imageWrapper_af017a,
+    [class^="imageWrapper_"],
+    [class*=" imageWrapper_"],
+    [class^="lazyImgContainer_"],
+    [class*=" lazyImgContainer_"]
+) {
+    contain: paint;
+}
+
+:is(
+    .imageWrapper_af017a,
+    [class^="imageWrapper_"],
+    [class*=" imageWrapper_"]
+):has(img[src*=".gif"]) {
+    isolation: isolate;
+    transform: translateZ(0);
 }
 
 code,
