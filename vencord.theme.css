@@ -274,6 +274,12 @@
     --radius-xxl: 0px;
 }
 
+/* Midnight promotes every scroll-like element to its own compositing layer.
+ * That can fight Discord's history scroll anchoring when messages are prepended. */
+[class*="scroll"] {
+    will-change: auto !important;
+}
+
 .theme-dark,
 .theme-darker,
 .theme-midnight,
