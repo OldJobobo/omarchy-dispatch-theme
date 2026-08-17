@@ -86,9 +86,9 @@
     --text-0: var(--dispatch-bg);
     --text-1: var(--dispatch-text-bright);
     --text-2: var(--dispatch-text);
-    --text-3: color-mix(in srgb, var(--dispatch-text) 52%, var(--dispatch-chrome) 48%);
-    --text-4: color-mix(in srgb, var(--dispatch-text) 30%, var(--dispatch-chrome) 70%);
-    --text-5: color-mix(in srgb, var(--dispatch-text) 18%, var(--dispatch-chrome) 82%);
+    --text-3: color-mix(in srgb, var(--dispatch-text) 90%, var(--dispatch-chrome) 10%);
+    --text-4: color-mix(in srgb, var(--dispatch-text) 80%, var(--dispatch-chrome) 20%);
+    --text-5: color-mix(in srgb, var(--dispatch-text) 75%, var(--dispatch-chrome) 25%);
 
     --bg-1: var(--dispatch-teal-dark);
     --bg-2: var(--dispatch-panel-raised);
@@ -203,9 +203,9 @@
     --text-warning: var(--dispatch-orange);
     --text-danger: var(--dispatch-red-bright);
     --text-brand: var(--dispatch-amber);
-    --channels-default: color-mix(in srgb, var(--dispatch-text) 62%, var(--dispatch-chrome) 38%) !important;
-    --channels-default-read: color-mix(in srgb, var(--channels-default) 36%, var(--text-5) 64%) !important;
-    --channels-default-muted: color-mix(in srgb, var(--channels-default) 48%, var(--text-5) 52%) !important;
+    --channels-default: color-mix(in srgb, var(--dispatch-text) 90%, var(--dispatch-chrome) 10%) !important;
+    --channels-default-read: color-mix(in srgb, var(--dispatch-text) 80%, var(--dispatch-chrome) 20%) !important;
+    --channels-default-muted: color-mix(in srgb, var(--dispatch-text) 75%, var(--dispatch-chrome) 25%) !important;
     --channels-default-unread: var(--dispatch-text-bright) !important;
     --channel-icon: var(--channels-default-read);
     --channel-text-area-placeholder: var(--text-4);
@@ -293,19 +293,16 @@
     --interactive-normal: var(--text-2);
     --interactive-hover: var(--dispatch-text-bright);
     --interactive-active: var(--text-1);
-    --channels-default: color-mix(in srgb, var(--dispatch-text) 62%, var(--dispatch-chrome) 38%) !important;
-    --channels-default-read: color-mix(in srgb, var(--channels-default) 36%, var(--text-5) 64%) !important;
-    --channels-default-muted: color-mix(in srgb, var(--channels-default) 48%, var(--text-5) 52%) !important;
+    --channels-default: color-mix(in srgb, var(--dispatch-text) 90%, var(--dispatch-chrome) 10%) !important;
+    --channels-default-read: color-mix(in srgb, var(--dispatch-text) 80%, var(--dispatch-chrome) 20%) !important;
+    --channels-default-muted: color-mix(in srgb, var(--dispatch-text) 75%, var(--dispatch-chrome) 25%) !important;
     --channels-default-unread: var(--dispatch-text-bright) !important;
 }
 
 /* Kill Midnight's neutral fallback surfaces */
 :is(
-    .theme-dark,
-    .theme-midnight,
     .app_de4237,
     .bg__960e4,
-    .layer__960e4,
     .baseLayer__960e4,
     .standardSidebarView__23e6b,
     .contentRegion__23e6b,
@@ -316,8 +313,7 @@
     .container__9293f,
     .content__908e2,
     .applicationStore_f07d62,
-    .shop__08415,
-    .scrollerBase__99f8c
+    .shop__08415
 ) {
     background-color: var(--bg-3) !important;
 }
@@ -330,8 +326,7 @@
     [class*="nowPlayingColumn"],
     [class*="membersWrap"],
     [class*="applicationStore"],
-    [class*="shop"],
-    [class*="scrollerBase"]
+    [class*="shop"]
 ) {
     background-color: var(--bg-3) !important;
 }
@@ -430,18 +425,10 @@
     border-top: 1px solid var(--border);
 }
 
-/* Voice stream view: clear page-level panels that bleed into call routes */
-:is(
-    .page_c48ade,
-    .base_c48ade,
-    [class*="page"],
-    [class*="base"]
-):has(:is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"])) :is(
-    div,
-    main,
-    section,
-    aside
-):not(button):not([role="button"]):not([class*="button"]):not([class*="Button"]):not([class*="control"]):not([class*="Control"]) {
+/* Voice stream view: clear only the route surfaces, preserving media and overlays. */
+:is(.page_c48ade, .base_c48ade):has(
+    :is(.callContainer_cb9592, .callContainer__722ff, [class*="callContainer"])
+) {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
@@ -649,10 +636,6 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     background-color: var(--dispatch-amber) !important;
 }
 
-:is([class*="colorDanger"], [class*="danger"], [class*="error"]) {
-    color: var(--dispatch-red-bright) !important;
-}
-
 /* Tab bar selected */
 .item__58105[aria-selected="true"],
 .tabBarItem_b9fccc[aria-selected="true"] {
@@ -661,27 +644,9 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     box-shadow: inset 0 -2px 0 var(--dispatch-amber);
 }
 
-/* Popouts, menus, modals, and cards */
-.menu_c1e9c4,
-.root__49fc1,
-.container__0f2e8,
-.messagesPopoutWrap__45690,
-.userProfileOuterUnthemed_c69a7b,
-[class*="popout"],
-[class*="popoutContainer"],
-[class*="popoutContent"],
-:is([class*="menu"], [class*="modal"], [class*="userPopout"], [class*="userProfileModal"]) {
-    background: var(--bg-2) !important;
-    color: var(--text-2);
-    border: 1px solid var(--border) !important;
-    border-radius: 0 !important;
-    box-shadow:
-        inset 0 0 0 1px rgba(0, 0, 0, 0.14),
-        0 16px 32px var(--dispatch-shadow) !important;
-}
-
-:is([class*="menu"], [class*="popout"], [class*="modal"]) [class*="focused"],
-:is([class*="menu"], [class*="popout"], [class*="modal"]) [class*="selected"] {
+/* Menus and cards: color through semantic variables; target only item states. */
+.menu_c1e9c4 [class*="focused"],
+.menu_c1e9c4 [class*="selected"] {
     background: var(--active) !important;
     color: var(--dispatch-text-bright) !important;
 }
@@ -705,11 +670,6 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     box-shadow:
         inset 0 0 0 1px rgba(0, 0, 0, 0.12),
         inset 0 -1px 0 rgba(230, 201, 58, 0.02);
-}
-
-:is([class*="modal"], [class*="uploadModal"]) {
-    background: var(--bg-2) !important;
-    border: 1px solid rgba(230, 201, 58, 0.24);
 }
 
 /* Reactions detail modal */
@@ -782,17 +742,6 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     fill: var(--bg-2) !important;
 }
 
-:is(
-    [class*="popout"],
-    [class*="popoutContainer"],
-    [class*="popoutContent"],
-    [class*="popout"] *,
-    [class*="popoutContainer"] *,
-    [class*="popoutContent"] *
-) {
-    backdrop-filter: none !important;
-}
-
 .footer__49fc1,
 .menu_c1e9c4::before {
     background: transparent !important;
@@ -844,7 +793,7 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     box-shadow: none !important;
 }
 
-/* Guild rail: keep top/bottom caps and unread tabs off the server list. */
+/* Guild rail surface normalization. */
 :is(
     .guilds_c48ade,
     .wrapper_ef3116,
@@ -892,11 +841,7 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     .wrapper_ef3116 [class*="tutorialContainer"]::before,
     .wrapper_ef3116 [class*="tutorialContainer"]::after,
     [class*="guilds"] [class*="tutorialContainer"]::before,
-    [class*="guilds"] [class*="tutorialContainer"]::after,
-    .wrapper__6e9f8::before,
-    .wrapper__6e9f8::after,
-    .listItem__650eb::before,
-    .listItem__650eb::after
+    [class*="guilds"] [class*="tutorialContainer"]::after
 ) {
     content: none !important;
     display: none !important;
@@ -906,29 +851,14 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     box-shadow: none !important;
 }
 
+/* Hide the large top/bottom unread overlays without touching server badges. */
 :is(
-    [class*="guilds"] [class*="unreadMentionsIndicator"],
-    .guilds_c48ade [class*="unreadMentionsIndicator"],
-    .wrapper_ef3116 [class*="unreadMentionsIndicator"]
-) {
+    .guilds_c48ade,
+    .wrapper_ef3116,
+    [class*="guilds"],
+    [class*="guildsList"]
+) [class*="unreadMentionsIndicator"] {
     display: none !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-:is(
-    [class*="guilds"] [class*="pill"] [class*="item"],
-    .guilds_c48ade [class*="pill"] [class*="item"],
-    .wrapper_ef3116 [class*="pill"] [class*="item"],
-    .wrapper__6e9f8,
-    .listItem__650eb,
-    .pill_e5445c,
-    .wrapper_ef3116 .item__58105
-) {
-    background: transparent !important;
-    border-color: transparent !important;
-    box-shadow: none !important;
 }
 
 /* Message action toolbar */
@@ -1058,9 +988,7 @@ body {
 }
 
 .container__9293f,
-.themed__9293f,
-[class*="titleBar"],
-[class*="toolbar"] {
+.themed__9293f {
     background: color-mix(in srgb, var(--dispatch-bg-deep) 84%, var(--dispatch-panel)) !important;
     border-bottom: 1px solid var(--dispatch-line) !important;
     box-shadow: inset 0 -1px 0 rgba(99, 187, 165, 0.06) !important;
@@ -1138,14 +1066,12 @@ pre,
     border-radius: 0 !important;
 }
 
-.divider__5126c,
-[class*="divider"] {
+.divider__5126c {
     border-color: var(--dispatch-line) !important;
 }
 
 .content__908e2,
-.content__71961,
-[class*="divider"] [class*="content"] {
+.content__71961 {
     color: var(--dispatch-chrome) !important;
     background: var(--dispatch-bg) !important;
     border: 1px solid var(--dispatch-line) !important;
@@ -1186,18 +1112,14 @@ a[data-list-item-id^="channels___"]:hover svg path {
     background: linear-gradient(90deg, var(--dispatch-line-cool), transparent);
 }
 
-.avatar__44b0c,
-[class*="avatar"] {
+.avatar__44b0c {
     box-shadow: 0 0 0 1px rgba(138, 123, 104, 0.20);
 }
 
-.avatar__44b0c:hover,
-[class*="avatar"]:hover {
+.avatar__44b0c:hover {
     box-shadow: 0 0 0 1px var(--dispatch-line-cool), var(--dispatch-data-glow);
 }
 
-[style*="--custom-status-color"],
-[class*="customStatus"],
-[class*="activity"] {
+[style*="--custom-status-color"] {
     color: var(--dispatch-teal-light) !important;
 }
