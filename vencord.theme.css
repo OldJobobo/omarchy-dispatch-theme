@@ -454,7 +454,7 @@
 
 .modeSelected__2ea32 .link__2ea32,
 .selected__91a9d .layout__20a53,
-:is([class*="modeSelected"], [class*="modeConnected"]) [class*="link"] {
+:is([class*="modeSelected"], [class*="modeConnected"]) a[class*="link"] {
     background: var(--active) !important;
     border-left-color: var(--dispatch-amber) !important;
     box-shadow: none !important;
