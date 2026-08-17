@@ -393,9 +393,8 @@
     .svg_cc5dd2,
     .childWrapper__6e9f8,
     .circleIconButton__5bc7e,
-    [class*="reaction"],
-    [class*="reactionMe"],
-    [class*="reactionDefault"],
+    [class^="reaction_"],
+    [class*=" reaction_"],
     [class*="reactionBtn"]
 ) {
     border-radius: 0 !important;
@@ -718,34 +717,17 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     background: var(--hover) !important;
 }
 
-/* Tooltips */
-:is([class*="tooltip"], [role="tooltip"]) {
-    background-color: var(--bg-2) !important;
-    background-image: none !important;
+/* Reaction hover tooltip: target the visible reaction card, not its portal wrappers. */
+:is(
+    [class^="reactionTooltip_"],
+    [class*=" reactionTooltip_"]
+) {
+    background: var(--bg-2) !important;
     border: 1px solid var(--border) !important;
     color: var(--text-1) !important;
     opacity: 1 !important;
-    box-shadow: 0 8px 20px var(--dispatch-shadow) !important;
+    box-shadow: 0 8px 20px var(--dispatch-shadow-soft) !important;
     backdrop-filter: none !important;
-}
-
-:is(
-    [class*="tooltip"] [class*="tooltipContent"],
-    [class*="tooltip"] [class*="content"],
-    [role="tooltip"] [class*="tooltipContent"],
-    [role="tooltip"] [class*="content"]
-) {
-    background: transparent !important;
-    background-image: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: var(--text-1) !important;
-    opacity: 1 !important;
-}
-
-:is([class*="tooltipPointer"], [class*="tooltip"] [class*="pointer"]) {
-    color: var(--bg-2) !important;
-    fill: var(--bg-2) !important;
 }
 
 .footer__49fc1,
@@ -894,13 +876,14 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     border: none !important;
 }
 
-:is([class*="reaction"]):not([class*="reactions"]):not([class*="reactionRow"]):not([class*="reactionsRow"]):not([class*="reactionsContainer"]) {
+:is([class^="reaction_"], [class*=" reaction_"]) {
     background: rgba(99, 187, 165, 0.04) !important;
     border: 1px solid transparent !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
 }
 
-:is([class*="reaction"]):not([class*="reactions"]):not([class*="reactionRow"]):not([class*="reactionsRow"]):not([class*="reactionsContainer"]):hover {
+:is([class^="reaction_"], [class*=" reaction_"]):hover {
     background: rgba(230, 201, 58, 0.08) !important;
 }
 
@@ -923,11 +906,11 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] {
     background-image: none !important;
 }
 
-:is(
+:is([class^="reaction_"], [class*=" reaction_"]):is(
     [class*="reactionMe"],
-    [class*="reaction"][aria-pressed="true"],
-    [class*="reaction"][class*="selected"]
-):not([class*="reactions"]):not([class*="reactionRow"]):not([class*="reactionsRow"]) {
+    [aria-pressed="true"],
+    [class*="selected"]
+) {
     background: var(--active) !important;
     border-color: transparent !important;
     box-shadow: inset 0 -1px 0 var(--dispatch-amber) !important;
