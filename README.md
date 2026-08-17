@@ -6,6 +6,10 @@ A tactical dark theme inspired by *Dispatch*: cold teal operations panels, warm 
 
 ![Dispatch desktop preview](preview.png)
 
+### Unlock Screen
+
+![Dispatch unlock screen preview](preview-unlock.png)
+
 ## Install
 
 Use the Omarchy theme installer:
@@ -109,3 +113,7 @@ Omarchy 3.8 compatibility files are retained for the equivalent legacy surfaces.
 - Inspired by the visual language, characters, and environments of *Dispatch* by AdHoc Studio
 - Vencord styling is layered on [Midnight Discord](https://github.com/refact0r/midnight-discord)
 - Neovim integration uses [Aether](https://github.com/bjarneo/aether.nvim)
+
+## License
+
+Released under the [MIT License](LICENSE).
